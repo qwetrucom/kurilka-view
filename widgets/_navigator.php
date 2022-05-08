@@ -3,8 +3,9 @@
 use yii\bootstrap5\Nav;
 
 /* @var $parametr core\tools\components\Parametr */
-/* @var $razdel_items core\edit\entities\Shop\Razdel[] */
-/* @var $page_items core\edit\entities\content\Page */
+/* @var $book_items core\edit\entities\Library\Book */
+/* @var $blog_items core\edit\entities\Blog\Category */
+/* @var $community_items core\edit\entities\Community\Page */
 /* @var $menu_items frontend\widgets\NavigatorWidget */
 
 $razdelLabel = $parametr->getRazdel();
@@ -20,23 +21,23 @@ $pageLabel   = $parametr->getPage();
                 'url'   => ['/site/index'],
             ],
             [
-                'label'   => $razdelLabel,
+                'label'   => 'Сообщества',
                 'url'     => [
-                    '/razdel/index'
+                    '/community/index'
                 ],
-                'active'  => Yii::$app->controller->id == 'razdel',
-                'items'   => $razdel_items,
+                'active'  => Yii::$app->controller->id == 'community',
+                'items'   => $community_items,
                 'options' => [
                     'class' => ''
                 ],
             ],
             [
-                'label' => $pageLabel,
+                'label' => 'Блоги',
                 'url'     => [
                     '/page/index'
                 ],
                 'active'  => Yii::$app->controller->id == 'view',
-                'items'   => $page_items,
+                'items'   => $blog_items,
                 'options' => [
                     'class' => ''
                 ],
