@@ -29,7 +29,7 @@ $this->beginContent('@frontend/views/layouts/main.php'); ?>
     'sections/_navigator',
     [
         'parametr' => $parametr,
-        'id' => 2
+        'id' => 1
     ]
 ); ?>
 
